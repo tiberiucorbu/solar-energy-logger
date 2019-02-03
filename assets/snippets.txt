@@ -1,0 +1,27 @@
+// write date to string
+
+void printDate()
+{
+  time_t rawtime;
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo))
+  {
+    Serial.println("Failed to obtain time");
+   return;
+  }
+
+  char timeStringBuff[11]; //50 chars should be enough
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%Y-%m-%d", &timeinfo);
+  lcd.lcd.home();
+  lcd.lcd.print(timeStringBuff);
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%H:%M:%S", &timeinfo);
+  lcd.lcd.setCursor(0, 1);
+  lcd.lcd.print(timeStringBuff);
+}
+
+// write date to isostring
+
+struct tm timeinfo;
+if (getLocalTime(&timeinfo)){
+  asctime(&tm)
+}
