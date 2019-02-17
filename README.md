@@ -8,7 +8,7 @@ SPIKE-ing
 
 ## Motivation
 
-Logging the voltage and current output/input on the solar and the battery ends requires a lot of manual work, using traditional methods (a multimeter). So I started to build a dual chanel multimeter of voltage and current that stores at a certain tick the readings. Because we are in 2019 and wifi/ble MCU come in cheap 
+Logging the voltage and current output/input on the solar and the battery ends requires a lot of manual work, using traditional methods like a regular multimeter. So I started to build a dual chanel multimeter for voltage and current that, stores at a certain tick the readings. Because wifi/ble MCUs come in cheap these days and they provide an simple way of logging data, I strongly consider implementing at least one of the two remote interface : either BLE and MQTT.
 
 ---------- 
 
