@@ -1,0 +1,18 @@
+version: '3'
+services:
+  node-red:
+    image: tciot:node-red-bundle
+    environment:
+      DATA_DIR: /tciot/node-red-storage/data
+      USER_DIR: /tciot/node-red-storage/user
+    build: ./node-red-bundle
+    ports:
+      - "1880:1880"
+    volumes:
+      - ca-certificates:/certificates
+      - tciot-node-red-storage:/tciot/node-red-storage
+volumes:
+  ca-certificates:
+    external: true
+  tciot-node-red-storage:
+    external: true
