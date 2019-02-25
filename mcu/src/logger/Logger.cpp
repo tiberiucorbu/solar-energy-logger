@@ -25,7 +25,7 @@ void Logger::store(LoggerEntry *entry)
 {
     char filename[20];
     computeFileName(filename, entry->category);
-    ESP_LOGW(TAG, "Atempting to open file [%s] for appending", filename);
+    ESP_LOGI(TAG, "Atempting to open file [%s] for appending", filename);
 
     if (parameters->fileSystem)
     {
