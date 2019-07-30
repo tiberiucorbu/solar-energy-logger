@@ -8,12 +8,11 @@ static const char *TAG = "Main";
 Preferences preferences;
 
 CurrentSensorDevice currentSensorDevice = INA219();
-CurrentSensorConfiguration currentSensorConfiguration = {
-    loggerQueue};
+CurrentSensorConfiguration currentSensorConfiguration = {loggerQueue};
 CurrentSensor currentSensor(&currentSensorConfiguration, &currentSensorDevice);
 CurrentSensorReadingsTaskParameters currentSensorReadingsTaskParameters = {
     &currentSensor
-    // &xWireSemaphore // TODO:  because there are  multiple devices that work with the same wire, a semaphore is needed in order to sync them.
+    // &xWireSemaphore // TODO:  because there are  multiple devices that are connected to the same wire, a semaphore is needed in order to sync them.
 };
 
 RealTimeClock rtc(Wire);
