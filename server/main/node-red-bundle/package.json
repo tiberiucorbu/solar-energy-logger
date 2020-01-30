@@ -2,7 +2,7 @@
   "name": "@tciot/node-red-bundle",
   "version": "1.0.0",
   "dependencies": {
-    "node-red": "0.20.7"
+    "node-red": "0.20.8"
   },
   "scripts": {
     "start": "node-red --setting settings.js"
